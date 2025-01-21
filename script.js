@@ -18,7 +18,11 @@ document.addEventListener('DOMContentLoaded', function() {
         // Create remove button for the task
         const removeBtn = document.createElement('button');
         removeBtn.textContent = "Remove";
-        removeBtn.className = "remove-btn";
+
+        // Add the 'remove-btn' class using classList.add
+        removeBtn.classList.add('remove-btn');
+        
+        // Assign an onclick event to the remove button
         removeBtn.onclick = function() {
             taskList.removeChild(li);
             saveTasks(); // Update localStorage
@@ -40,7 +44,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Add task on button click
     addButton.addEventListener('click', addTask);
 
-    // Add task on Enter key press
+    // Add task on 'Enter' key press
     taskInput.addEventListener('keypress', function(event) {
         if (event.key === 'Enter') {
             addTask();
@@ -65,7 +69,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
             const removeBtn = document.createElement('button');
             removeBtn.textContent = "Remove";
-            removeBtn.className = "remove-btn";
+            
+            // Add the 'remove-btn' class using classList.add
+            removeBtn.classList.add('remove-btn');
+
             removeBtn.onclick = function() {
                 taskList.removeChild(li);
                 saveTasks();
